@@ -1,4 +1,4 @@
-package Perinci::Sub::XCompletion::cryptocurrency_symbol;
+package Perinci::Sub::XCompletion::cryptocurrency_code_or_name;
 
 # DATE
 # VERSION
@@ -23,11 +23,13 @@ sub gen_completion {
 
     sub {
         my %cargs = @_;
-        complete_array_elem(%cargs, array=>[$cat->all_symbols]);
+        complete_array_elem(
+            %cargs,
+            array=>[map {($_->{code}, $_->{name})} $cat->all_data]);
     };
 }
 
 1;
-# ABSTRACT: Generate completion for cryptocurrency symbol
+# ABSTRACT: Generate completion for cryptocurrency code/name
 
 =cut
