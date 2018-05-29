@@ -1,4 +1,4 @@
-package Perinci::Sub::XCompletion::cryptoexchange_name;
+package Perinci::Sub::XCompletion::cryptocurrency;
 
 # DATE
 # VERSION
@@ -15,23 +15,21 @@ $SPEC{gen_completion} = {
     v => 1.1,
 };
 sub gen_completion {
-    require CryptoExchange::Catalog;
+    require CryptoCurrency::Catalog;
 
     my %fargs = @_;
 
-    my $cat = CryptoExchange::Catalog->new;
+    my $cat = CryptoCurrency::Catalog->new;
 
     sub {
         my %cargs = @_;
         complete_array_elem(
             %cargs,
-            array=>[map {$_->{name}}
-                        $cat->all_data],
-        );
+            array=>[map {($_->{code}, $_->{name}, $_->{safename})} $cat->all_data]);
     };
 }
 
 1;
-# ABSTRACT: Generate completion for cryptocurrency exchange name
+# ABSTRACT: Generate completion for cryptocurrency code/name/safename
 
 =cut

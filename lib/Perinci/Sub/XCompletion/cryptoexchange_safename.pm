@@ -1,4 +1,4 @@
-package Perinci::Sub::XCompletion::cryptoexchange_name;
+package Perinci::Sub::XCompletion::cryptoexchange_safename;
 
 # DATE
 # VERSION
@@ -23,15 +23,11 @@ sub gen_completion {
 
     sub {
         my %cargs = @_;
-        complete_array_elem(
-            %cargs,
-            array=>[map {$_->{name}}
-                        $cat->all_data],
-        );
+        complete_array_elem(%cargs, array=>[map {$_->{safename}} $cat->all_data]);
     };
 }
 
 1;
-# ABSTRACT: Generate completion for cryptocurrency exchange name
+# ABSTRACT: Generate completion for cryptoexchange safename
 
 =cut
