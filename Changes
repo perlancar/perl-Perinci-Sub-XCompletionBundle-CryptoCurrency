@@ -1,25 +1,25 @@
-0.005   2018-06-06 (PERLANCAR)
+0.005   2018-06-06  Released-By: PERLANCAR
 
 	- Add completion: fiat_or_cryptocurrency.
 
 
-0.004   2018-05-29 (PERLANCAR)
+0.004   2018-05-29  Released-By: PERLANCAR
 
 	- Add completions: cryptocurrency, cryptocurrency_safename,
 	  cryptoexchange, cryptoexchange_code, cryptoexchange_safename.
 
 
-0.003   2018-03-08 (PERLANCAR)
+0.003   2018-03-08  Released-By: PERLANCAR
 
 	- Rename module:
 	  Perinci::Sub::XCompletion::cryptocurrency_{symbol,code}*.
 
 
-0.002   2018-01-30 (PERLANCAR)
+0.002   2018-01-30  Released-By: PERLANCAR
 
 	- Add completion: cryptoexchange_name.
 
 
-0.001    2018-01-12 (PERLANCAR)
+0.001    2018-01-12  Released-By: PERLANCAR
 
          - First release.
